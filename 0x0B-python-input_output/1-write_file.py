@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-"""This module defines a text file-writting function"""
+"""This module defines a file-writing function."""
 
 
-def read_file(filename="",s=""):
-    """write the contents in UTF8 text file"""
-    with open(filename,"w", encoding="utf-8") as f:
-        return f.write(s)
+def write_file(filename="", text=""):
+    """Writes a string to a UTF8 text file
+    """
+    with open(filename, "w", encoding="utf-8") as f:
+        return f.write(text)
