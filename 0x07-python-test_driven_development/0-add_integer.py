@@ -1,19 +1,13 @@
 #!/usr/bin/python3
-"""Module for add_integer method."""
+"""
+Module for add_integer method.
 
+This module has one function that adds up 2 integers
+"""
 
 def add_integer(a, b=98):
-    """Adds two integers.
-
-    Args:
-        a: the first integer.
-        b: the second integer, default 98.
-
-    Raises:
-        TypeError: if a, b are not int, float.
-
-    Returns:
-        The sum of the two integers.
+    """Args: a: the first integer.b: the second integer, default 98.
+    Returns: The sum of the two integers.
     """
 
     if type(a) not in (int, float):
