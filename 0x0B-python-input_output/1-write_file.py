@@ -5,4 +5,4 @@
 def read_file(filename="",s=""):
     """write the contents in UTF8 text file"""
     with open(filename,"w", encoding="utf-8") as f:
-        f.write(s)
+        return f.write(s)
