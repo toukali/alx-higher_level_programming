@@ -1,1 +1,218 @@
-{"payload":{"allShortcutsEnabled":false,"fileTree":{"0x07-python-test_driven_development/tests":{"items":[{"name":"0-add_integer.txt","path":"0x07-python-test_driven_development/tests/0-add_integer.txt","contentType":"file"},{"name":"100-matrix_mul.txt","path":"0x07-python-test_driven_development/tests/100-matrix_mul.txt","contentType":"file"},{"name":"101-lazy_matrix_mul.txt","path":"0x07-python-test_driven_development/tests/101-lazy_matrix_mul.txt","contentType":"file"},{"name":"2-matrix_divided.txt","path":"0x07-python-test_driven_development/tests/2-matrix_divided.txt","contentType":"file"},{"name":"3-say_my_name.txt","path":"0x07-python-test_driven_development/tests/3-say_my_name.txt","contentType":"file"},{"name":"4-print_square.txt","path":"0x07-python-test_driven_development/tests/4-print_square.txt","contentType":"file"},{"name":"5-text_indentation.txt","path":"0x07-python-test_driven_development/tests/5-text_indentation.txt","contentType":"file"},{"name":"6-max_integer_test.py","path":"0x07-python-test_driven_development/tests/6-max_integer_test.py","contentType":"file"}],"totalCount":8},"0x07-python-test_driven_development":{"items":[{"name":"tests","path":"0x07-python-test_driven_development/tests","contentType":"directory"},{"name":"0-add_integer.py","path":"0x07-python-test_driven_development/0-add_integer.py","contentType":"file"},{"name":"100-matrix_mul.py","path":"0x07-python-test_driven_development/100-matrix_mul.py","contentType":"file"},{"name":"101-lazy_matrix_mul.py","path":"0x07-python-test_driven_development/101-lazy_matrix_mul.py","contentType":"file"},{"name":"102-python.c","path":"0x07-python-test_driven_development/102-python.c","contentType":"file"},{"name":"2-matrix_divided.py","path":"0x07-python-test_driven_development/2-matrix_divided.py","contentType":"file"},{"name":"3-say_my_name.py","path":"0x07-python-test_driven_development/3-say_my_name.py","contentType":"file"},{"name":"4-print_square.py","path":"0x07-python-test_driven_development/4-print_square.py","contentType":"file"},{"name":"5-text_indentation.py","path":"0x07-python-test_driven_development/5-text_indentation.py","contentType":"file"}],"totalCount":9},"":{"items":[{"name":"0x07-python-test_driven_development","path":"0x07-python-test_driven_development","contentType":"directory"},{"name":"0x0A-python-inheritance","path":"0x0A-python-inheritance","contentType":"directory"},{"name":"0x0C-python-almost_a_circle","path":"0x0C-python-almost_a_circle","contentType":"directory"},{"name":"0x17 C - Doubly linked lists","path":"0x17 C - Doubly linked lists","contentType":"directory"},{"name":"0x18 C - Dynamic libraries","path":"0x18 C - Dynamic libraries","contentType":"directory"},{"name":"100-realloc.c","path":"100-realloc.c","contentType":"file"},{"name":"101-mul.c","path":"101-mul.c","contentType":"file"},{"name":"101-password","path":"101-password","contentType":"file"},{"name":"2-calloc.c","path":"2-calloc.c","contentType":"file"},{"name":"3-array_range.c","path":"3-array_range.c","contentType":"file"},{"name":"_putchar.c","path":"_putchar.c","contentType":"file"},{"name":"main.h","path":"main.h","contentType":"file"}],"totalCount":12}},"fileTreeProcessingTime":7.625344,"foldersToFetch":[],"reducedMotionEnabled":null,"repo":{"id":627534744,"defaultBranch":"main","name":"alx","ownerLogin":"sadatmisr","currentUserCanPush":false,"isFork":false,"isEmpty":false,"createdAt":"2023-04-13T17:04:55.000Z","ownerAvatar":"https://avatars.githubusercontent.com/u/130691074?v=4","public":true,"private":false,"isOrgOwned":false},"symbolsExpanded":false,"treeExpanded":true,"refInfo":{"name":"main","listCacheKey":"v0:1695082556.0","canEdit":false,"refType":"branch","currentOid":"907071687d98b6e848fd75176358115c4081617f"},"path":"0x07-python-test_driven_development/tests/101-lazy_matrix_mul.txt","currentUser":null,"blob":{"rawLines":[">>> matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul","",">>> print(matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]]))","[[ 7 10]"," [15 22]]","",">>> print(matrix_mul([[1, 2]], [[3, 4], [5, 6]]))","[[13 16]]","",">>> print(matrix_mul([[1, 2.3], [3.4, 4.2]], [[1.3, 2.3], [3.3, 4.1]]))","[[ 8.89 11.73]"," [18.28 25.04]]","",">>> print(matrix_mul([[1.0, 2.0], [3.0, 4.0]], [[1.0, 2], [3, 4]]))","[[ 7. 10.]"," [15. 22.]]","","\"\"\"","Error","\"\"\"","",">>> try:","...\tprint(matrix_mul([[1, 2, 3]], [1, 2, 3]))","... except Exception as te:","...\tprint(te)","[14]","",">>> try:","...\tprint(matrix_mul([[1, \"HELLO\"]], [[3, 4], [5, 6]]))","... except Exception as te:","... \tprint(te)","invalid data type for einsum","",">>> try:","...\tprint(matrix_mul([[1, 2], [3, 4]], [[1, 2], [\"3\", 4]]))","... except Exception as te:","... \tprint(te)","invalid data type for einsum","","",">>> try:","...\tprint(matrix_mul([[1], [2]], [[3, 4], [5, 6]]))","... except Exception as te:","... \tprint(te)","shapes (2,1) and (2,2) not aligned: 1 (dim 1) != 2 (dim 0)","","",">>> try:","...\tprint(matrix_mul([[1], [3, 2]], [[3, 4], [5, 6]]))","... except Exception as te:","... \tprint(te)","setting an array element with a sequence.","",">>> try:","...\tprint(matrix_mul([[1], [2]], [[2, 3, 4], [5, 6]]))","... except Exception as te:","... \tprint(te)","setting an array element with a sequence.","",">>> try:","...\tprint(matrix_mul(None, None))","... except Exception as te:","... \tprint(te)","Object arrays are not currently supported","",">>> try:","...\tprint(matrix_mul([1, 2], None))","... except Exception as te:","... \tprint(te)","Object arrays are not currently supported","",">>> try:","...\tprint(matrix_mul([], []))","... except Exception as te:","... \tprint(te)","0.0","",">>> try:","...\tprint(matrix_mul([None], []))","... except Exception as te:","... \tprint(te)","Object arrays are not currently supported","",">>> try:","...\tprint(matrix_mul([1, 2, 3], []))","... except Exception as te:","... \tprint(te)","shapes (3,) and (0,) not aligned: 3 (dim 0) != 0 (dim 0)","",">>> try:","...\tprint(matrix_mul([1, 2, 3], [None]))","... except Exception as te:","... \tprint(te)","Object arrays are not currently supported","",">>> try:","...\tprint(matrix_mul([[1, 2, 3]], [None]))","... except Exception as te:","... \tprint(te)","Object arrays are not currently supported","",">>> try:","...\tprint(matrix_mul([[5, 6], [7, 8]], [[]]))","... except Exception as te:","... \tprint(te)","shapes (2,2) and (1,0) not aligned: 2 (dim 1) != 1 (dim 0)","",">>> try:","...\tprint(matrix_mul([[1, 2], [3, 4], [3, 4]], [[5, 6, 1], [7, 8, 2]]))","... except Exception as te:","... \tprint(te)","[[19 22  5]"," [43 50 11]"," [43 50 11]]","",">>> try:","...\tprint(matrix_mul([[1, 2, 3]], ))","... except Exception as te:","...\tprint(te)","lazy_matrix_mul() missing 1 required positional argument: 'm_b'","",">>> try:","...\tprint(matrix_mul())","... except Exception as te:","...\tprint(te)","lazy_matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'"],"stylingDirectives":[[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]],"csv":null,"csvError":null,"dependabotInfo":{"showConfigurationBanner":false,"configFilePath":null,"networkDependabotPath":"/sadatmisr/alx/network/updates","dismissConfigurationNoticePath":"/settings/dismiss-notice/dependabot_configuration_notice","configurationNoticeDismissed":null,"repoAlertsPath":"/sadatmisr/alx/security/dependabot","repoSecurityAndAnalysisPath":"/sadatmisr/alx/settings/security_analysis","repoOwnerIsOrg":false,"currentUserCanAdminRepo":false},"displayName":"101-lazy_matrix_mul.txt","displayUrl":"https://github.com/sadatmisr/alx/blob/main/0x07-python-test_driven_development/tests/101-lazy_matrix_mul.txt?raw=true","headerInfo":{"blobSize":"2.72 KB","deleteInfo":{"deleteTooltip":"You must be signed in to make or propose changes"},"editInfo":{"editTooltip":"You must be signed in to make or propose changes"},"ghDesktopPath":"https://desktop.github.com","gitLfsPath":null,"onBranch":true,"shortPath":"2694323","siteNavLoginPath":"/login?return_to=https%3A%2F%2Fgithub.com%2Fsadatmisr%2Falx%2Fblob%2Fmain%2F0x07-python-test_driven_development%2Ftests%2F101-lazy_matrix_mul.txt","isCSV":false,"isRichtext":false,"toc":null,"lineInfo":{"truncatedLoc":"126","truncatedSloc":"102"},"mode":"file"},"image":false,"isCodeownersFile":null,"isPlain":false,"isValidLegacyIssueTemplate":false,"issueTemplateHelpUrl":"https://docs.github.com/articles/about-issue-and-pull-request-templates","issueTemplate":null,"discussionTemplate":null,"language":"Text","languageID":372,"large":false,"loggedIn":false,"newDiscussionPath":"/sadatmisr/alx/discussions/new","newIssuePath":"/sadatmisr/alx/issues/new","planSupportInfo":{"repoIsFork":null,"repoOwnedByCurrentUser":null,"requestFullPath":"/sadatmisr/alx/blob/main/0x07-python-test_driven_development/tests/101-lazy_matrix_mul.txt","showFreeOrgGatedFeatureMessage":null,"showPlanSupportBanner":null,"upgradeDataAttributes":null,"upgradePath":null},"publishBannersInfo":{"dismissActionNoticePath":"/settings/dismiss-notice/publish_action_from_dockerfile","dismissStackNoticePath":"/settings/dismiss-notice/publish_stack_from_file","releasePath":"/sadatmisr/alx/releases/new?marketplace=true","showPublishActionBanner":false,"showPublishStackBanner":false},"rawBlobUrl":"https://github.com/sadatmisr/alx/raw/main/0x07-python-test_driven_development/tests/101-lazy_matrix_mul.txt","renderImageOrRaw":false,"richText":null,"renderedFileInfo":null,"shortPath":null,"tabSize":8,"topBannersInfo":{"overridingGlobalFundingFile":false,"globalPreferredFundingPath":null,"repoOwner":"sadatmisr","repoName":"alx","showInvalidCitationWarning":false,"citationHelpUrl":"https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/about-citation-files","showDependabotConfigurationBanner":false,"actionsOnboardingTip":null},"truncated":false,"viewable":true,"workflowRedirectUrl":null,"symbols":{"timed_out":false,"not_analyzed":true,"symbols":[]}},"copilotInfo":null,"copilotAccessAllowed":false,"csrf_tokens":{"/sadatmisr/alx/branches":{"post":"52TZtkGVC89vI-gzOl_MquRClCl9yyclks9qz9ULH2oh41z131avzllRPnGOU1zEEH_w55OsJzbr_T10x5gmag"},"/repos/preferences":{"post":"O8uuHm5iYr35ky0NGCvT7P7eWgOVNk93_l2aDsAZN4XJSs3S8xixrJag2mW7TNp88uSPOHjKLu1vco-9Gwi_uQ"}}},"title":"alx/0x07-python-test_driven_development/tests/101-lazy_matrix_mul.txt at main · sadatmisr/alx"}
+=================================
+How to Use 101-lazy_matrix_mul.py
+=================================
+This module defines a matrix multiplication function
+``lazy_matrix_mul(m_a, m_b)``.
+
+Usage
+=====
+
+``lazy_matrix_mul(...)`` returns a new matrix representing the multiplication
+of ``m_a`` by ``m_b``.
+
+::
+
+    >>> lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
+    >>> m_a = 
+
+    ... [1, 2],
+    ... [3, 4],
+    ... ]
+    >>> m_b = m_a
+    >>> print(lazy_matrix_mul(m_a, m_b))
+    [[ 7 10]
+     [15 22]]
+
+::
+
+    >>> m_a = [[1, 2]]
+    >>> m_b = [
+    ... [3, 4],
+    ... [5, 6]
+    ... ]
+    >>> print(lazy_matrix_mul(m_a, m_b))
+    [[13 16]]
+
+The function also works with floating-point numbers.
+
+::
+
+    >>> m_a = [
+    ... [1.2, 5.5, 6.2],
+    ... [4.66, 12.3, -9.2]
+    ... ]
+    >>> m_b = [
+    ... [5.0, 3.3],
+    ... [-2.9, 4.4],
+    ... [7.2, 4.4]
+    ... ]
+    >>> print(lazy_matrix_mul(m_a, m_b))
+    [[ 34.69   55.44 ]
+     [-78.61   29.018]]
+
+A minimum of two arguments must be provided.
+
+::
+
+    >>> print(lazy_matrix_mul(m_a))
+    Traceback (most recent call last):
+    TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
+
+::
+
+    >>> print(lazy_matrix_mul()) # doctest: +NORMALIZE_WHITESPACE
+    Traceback (most recent call last):
+    TypeError: lazy_matrix_mul() missing 2 required positional arguments: 
+    'm_a' and 'm_b'
+
+ValueErrors
+===========
+
+If two matrices cannot be multiplied (ie. the row count of ``m_a`` is not
+equal to the column count in ``m_b``), a ValueError is raised.
+
+::
+
+    >>> m_a = [
+    ... [1, 2],
+    ... [3, 4],
+    ... ]
+    >>> m_b = [
+    ... [1, 2],
+    ... [2, 3],
+    ... [4, 5]
+    ... ]
+
+    >>> print(lazy_matrix_mul(m_a, m_b))
+    Traceback (most recent call last):
+    ValueError: shapes (2,2) and (3,2) not aligned: 2 (dim 1) != 3 (dim 0)
+
+
+The parameters ``m_a`` and ``m_b`` cannot be empty. Otherwise, a ValueError
+is raised.
+
+::
+
+    >>> print(lazy_matrix_mul([[]], [[5, 6], [7, 8]]))
+    Traceback (most recent call last):
+    ValueError: shapes (1,0) and (2,2) not aligned: 0 (dim 1) != 2 (dim 0)
+
+::
+
+    >>> print(lazy_matrix_mul([[5, 6], [7, 8]], [[]]))
+    Traceback (most recent call last):
+    ValueError: shapes (2,2) and (1,0) not aligned: 2 (dim 1) != 1 (dim 0)
+
+Invalid Matrices
+================
+
+The parameters ``m_a`` and ``m_b`` must be lists. If either parameter is
+not a list, a ValueError is raised.
+
+::
+
+    >>> print(lazy_matrix_mul("not a list", [[1, 2]]))
+    Traceback (most recent call last):
+    ValueError: Scalar operands are not allowed, use '*' instead
+
+::
+
+    >>> print(lazy_matrix_mul([[1, 2]], "also not a list"))
+    Traceback (most recent call last):
+    ValueError: Scalar operands are not allowed, use '*' instead
+
+::
+
+    >>> print(lazy_matrix_mul("not a list", "also not a list"))
+    Traceback (most recent call last):
+    ValueError: Scalar operands are not allowed, use '*' instead
+
+If either parameter is ``None``, a TypeError is raised.
+
+::
+
+    >>> print(lazy_matrix_mul(None, None))
+    Traceback (most recent call last):
+    TypeError: Object arrays are not currently supported
+
+Not just any list - they *must* be lists of lists! Otherwise, behavior is
+undefined.
+
+::
+
+    >>> print(lazy_matrix_mul([1, 2], [[3, 4]]))
+    Traceback (most recent call last):
+    ValueError: shapes (2,) and (1,2) not aligned: 2 (dim 0) != 1 (dim 0)
+
+::
+
+    >>> print(lazy_matrix_mul([[1, 2]], [3, 4]))
+    [11]
+
+::
+
+    >>> print(lazy_matrix_mul([1, 2], [3, 4]))
+    11
+
+And not just any list of lists - they *must* be lists of lists containing
+integers or floats! Otherwise, a ValueError or TypeError is raised
+
+::
+
+    >>> print(lazy_matrix_mul([[1, "non-number"]], [[3, 4]]))
+    Traceback (most recent call last):
+    ValueError: shapes (1,2) and (1,2) not aligned: 2 (dim 1) != 1 (dim 0)
+
+::
+
+    >>> print(lazy_matrix_mul([[5, 6], [7, 8]], [[5, "6"], [7, 8]]))
+    Traceback (most recent call last):
+    TypeError: invalid data type for einsum
+
+::
+
+    >>> print(lazy_matrix_mul([[1, "non-number"]], [[{"a": 1}, 8.8]]))
+    Traceback (most recent call last):
+    TypeError: Object arrays are not currently supported
+
+Finally, the length of all rows in matrices ``m_a`` and ``m_b`` should be
+equivalent. Otherwise, a ValueError is raised.
+
+::
+
+    >>> m_a = [
+    ... [1, 2],
+    ... [3, 4, 5]
+    ... ]
+    >>> m_b = [
+    ... [1, 2],
+    ... [3, 4]
+    ... ]
+    >>> print(lazy_matrix_mul(m_a, m_b))
+    Traceback (most recent call last):
+    ValueError: setting an array element with a sequence.
+
+::
+
+    >>> m_a = [
+    ... [1, 2],
+    ... [3, 4]
+    ... ]
+    >>> m_b = [
+    ... [1, 2],
+    ... [3, 4, 5]
+    ... ]
+    >>> print(lazy_matrix_mul(m_a, m_b))
+    Traceback (most recent call last):
+    ValueError: setting an array element with a sequence.
+
+::
+
+    >>> m_a = [
+    ... [1, 2],
+    ... [3, 4, 5]
+    ... ]
+    >>> m_b = m_a
+    >>> print(lazy_matrix_mul(m_a, m_b))
+    Traceback (most recent call last):
+    ValueError: setting an array element with a sequen
