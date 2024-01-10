@@ -94,8 +94,7 @@ Test second arg invalid:
 Test both args invalid:
 
     >>> add_integer(None, None)
-    Traceback (most recent call last):
-        ...
+    Traceback (most recent call last):       ...
     TypeError: a must be an integer
 
 Test two strings:
