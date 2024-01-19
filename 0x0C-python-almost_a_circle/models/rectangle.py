@@ -86,6 +86,7 @@ class Rectangle(Base):
         for i in range(self.height):
             rectangle += (" " * self.x) + (print_symbol*self.width) + "\n"
         print(rectangle, end="")
+
         
     def __str__(self):
         """returns a string formart of the rectangle"""
