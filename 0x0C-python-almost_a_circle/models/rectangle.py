@@ -57,7 +57,7 @@ class Rectangle(Base):
         self.validate_int("y", value)
         self.__y = value
 
-    def validate_integer(self, name, value, eq=True):
+    def validate_int(self, name, value, eq=True):
         '''Method for validating the value.'''
         if type(value) != int:
             raise TypeError("{} must be an integer".format(name))
