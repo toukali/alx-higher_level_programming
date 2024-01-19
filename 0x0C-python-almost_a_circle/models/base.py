@@ -2,17 +2,13 @@
 """Defines a base model class."""
 
 
-
 class Base:
-    """Represent the base model.
+    """Represent the base model."""
 
-    Attribute:
-        __nb_objects (int): The number of instantiated Bases.
-    """
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """Initialize a new Base   """
+        """Initialize a new Base. """
         if id is not None:
             self.id = id
         else:
