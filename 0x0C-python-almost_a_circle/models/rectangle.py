@@ -56,6 +56,7 @@ class Rectangle(Base):
         """setter function for y"""
         self.validate_int("y", value)
         self.__y = value
+
         
     def validate_int(self, name, value, eq=True):
         '''Method for validating the value.'''
