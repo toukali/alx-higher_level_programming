@@ -24,3 +24,9 @@ class Square(Rectangle):
 
         self.width = value
         self.height = value
+
+    def __str__(self):
+        """ Overloading str function"""
+        return "[{}] ({}) {}/{} - {}".format(type(self).__name__,
+                                             self.id, self.x, self.y,
+                                             self.width)
